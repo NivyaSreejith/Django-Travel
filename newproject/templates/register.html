@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration</h2>
+<form action="register" method="post">
+    {% csrf_token %}
+    <input type="test" name="username" placeholder=" Enter Your Username"><br>
+    <input type="test" name="first_name" placeholder="Enter Your first name"><br>
+    <input type="test" name="last_name" placeholder="Enter Your last name"><br>
+    <input type="email" name="email" placeholder="Enter Your email address"><br>
+    <input type="password" name="password" placeholder="Enter Your Password"><br>
+    <input type="password" name="password1" placeholder="Confirm Your Password"><br>
+    <input type="submit" >
+</form>
+{% for msg in messages %}
+<h1>{{msg}}</h1>
+{% endfor %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif; /* Improves font readability */
+            padding: 20px; /* Adds some padding around the content */
+        }
+        form {
+            background-color: white; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+            max-width: 300px; /* Sets a max-width for the form and centers it */
+            margin: auto;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green background for the submit button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration</h2>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder=" Enter Your Username"><br>
+        <input type="text" name="first_name" placeholder="Enter Your first name"><br>
+        <input type="text" name="last_name" placeholder="Enter Your last name"><br>
+        <input type="email" name="email" placeholder="Enter Your email address"><br>
+        <input type="password" name="password" placeholder="Enter Your Password"><br>
+        <input type="password" name="password1" placeholder="Confirm Your Password"><br>
+        <input type="submit">
+    </form>
+    {% for msg in messages %}
+    <h1>{{msg}}</h1>
+    {% endfor %}
+</body>
+</html>
+
